@@ -1,0 +1,349 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  left: 0;
+  right: 0;
+  padding: 5px;
+  background: rgb(11, 11, 11);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 999;
+  overflow: auto;
+  white-space: nowrap;
+  /* height: 5vmin; */
+}
+
+.navbar .logo {
+  border-radius: 8px;
+  color: white;
+  padding-right: 4vmin;
+}
+
+.navbar .logo img {
+  width: 6vmin;
+  height: 6vmin;
+  margin-top: 5px;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  justify-content: space-around;
+  transition: all 0.3s;
+}
+
+.overlay .navbar-nav::-webkit-scrollbar-track-piece {
+  background-color: rgb(9, 14, 255);
+}
+
+.navbar .navbar-nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 1vmin;
+  margin: 1vmin;
+  border-radius: 8px;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.navbar .navbar-nav a:hover {
+  color: rgb(0, 98, 255);
+  border-bottom: 1px solid rgb(0, 98, 255);
+  transition: all 0.3s;
+}
+
+.jumbotron {
+  background-image: url(img/header/jumbotron.jpg);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position-y: -30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-position-x: center;
+}
+
+.jumbotron h1 {
+  text-align: center;
+  font-size: 4vmax;
+  color: white;
+  top: 40%;
+  text-shadow: 0 0 2px azure;
+  position: absolute;
+}
+
+.jumbotron div {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    to top,
+    black 5%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  position: absolute;
+}
+
+.content {
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  padding-top: 30px;
+  border: 1px solid white;
+  border-radius: 6px;
+}
+
+.content p,
+.content h2 {
+  margin: 5px;
+  color: white;
+  text-shadow: 0 0 2px azure;
+}
+
+.content p {
+  padding-bottom: 15px;
+}
+
+.content-paket {
+  width: 95%;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: auto;
+  background-color: rgba(216, 221, 224, 0.288);
+  border-radius: 8px;
+  border-top: 1px solid rgb(68, 67, 67);
+}
+
+.box-paket {
+  display: block;
+  padding: 5px;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px black;
+  position: relative;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.box-paket:hover {
+  margin-top: -0.5px;
+  transition: all 0.2s;
+}
+
+.box-paket img {
+  width: 125px;
+  height: 125px;
+  object-fit: scale-down;
+}
+
+.box-paket a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 3px;
+  border-radius: 6px;
+  color: white;
+  background-color: rgb(44, 41, 92);
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.box-paket a:hover {
+  font-size: 2.9vmin;
+  transition: all 0.2s;
+}
+
+.pengajar {
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  padding-top: 30px;
+  border: 1px solid white;
+  border-radius: 6px;
+}
+
+.pengajar p,
+.pengajar h2 {
+  margin: 5px;
+  color: white;
+  text-shadow: 0 0 2px azure;
+}
+
+.pengajar p {
+  padding-bottom: 15px;
+}
+
+.content-pengajar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: rgba(216, 221, 224, 0.288);
+  border-radius: 8px;
+  border-top: 1px solid rgb(68, 67, 67);
+}
+
+.box-pengajar {
+  padding: 6px;
+  width: 30vmin;
+  border-radius: 8px;
+  box-shadow: 0 0 5px black;
+  margin: 10px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.2s;
+}
+
+.box-pengajar img {
+  width: 28vmin;
+  height: 20vmin;
+  object-fit: scale-down;
+}
+
+.box-pengajar a {
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 6px;
+  color: white;
+  background-color: rgb(44, 41, 92);
+  font-size: 3vmin;
+  transition: all 0.2s;
+}
+
+.box-pengajar a:hover {
+  font-size: 2.9vmin;
+  transition: all 0.2s;
+  margin-bottom: -px;
+}
+
+.kontak {
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  padding-top: 30px;
+  border: 1px solid white;
+  border-radius: 6px;
+}
+
+.kontak p,
+.kontak h2 {
+  margin: 5px;
+  color: white;
+  text-shadow: 0 0 2px azure;
+}
+
+.kontak p {
+  padding-bottom: 15px;
+}
+
+.content-kontak {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: rgba(216, 221, 224, 0.288);
+  border-radius: 8px;
+  border-top: 1px solid rgb(68, 67, 67);
+}
+
+.box-kontak {
+  padding: 6px;
+  width: 40vmin;
+  transition: all 0.2s;
+}
+
+.box-kontak:hover {
+  margin-top: -0.5px;
+  transition: all 0.2s;
+}
+
+.box-kontak img {
+  width: 40vmin;
+  height: 20vmin;
+  object-fit: scale-down;
+}
+
+.box-kontak h3 {
+  font-size: 1rem;
+}
+
+.tentang {
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  padding-top: 30px;
+  border: 1px solid white;
+  border-radius: 6px;
+}
+
+.tentang h2 {
+  margin: 5px;
+  color: white;
+  text-shadow: 0 0 2px azure;
+}
+
+.tentang p {
+  padding-bottom: 15px;
+}
+
+.content-tentang {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: rgba(216, 221, 224, 0.288);
+  border-radius: 8px;
+  border-top: 1px solid rgb(68, 67, 67);
+}
+
+.box-tentang {
+  padding: 6px;
+  width: 90vmin;
+  border-radius: 8px;
+  box-shadow: 0 0 5px black;
+  margin: 10px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.2s;
+}
+
+.box-tentang img {
+  width: 28vmin;
+  height: 20vmin;
+  object-fit: scale-down;
+}
+
+.box-tentang a {
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 6px;
+  color: white;
+  background-color: rgb(44, 41, 92);
+  font-size: 3vmin;
+  transition: all 0.2s;
+}
+
+@media screen and (max-width: 768px) {
+  /* mobile */
+  .box-paket {
+    width: 150px;
+    margin: auto;
+  }
+  .content-paket {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin: auto;
+
+  }
+}
